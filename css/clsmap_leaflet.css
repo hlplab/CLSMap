@@ -1,0 +1,22 @@
+#map-canvas {height: 450px; width:600px;}
+
+.leaflet-popup-content-wrapper {
+  color: #00467F;
+  background-color: #fd0;
+  border: 2px solid #00467F;
+}
+
+.leaflet-popup-content {
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  text-align: center;
+  /*width: 150px;*/
+  white-space: nowrap;
+}
+.leaflet-popup-content .name {
+  font-size: 12px;
+  font-weight: bold;
+}
+.leaflet-popup-content .position {
+  font-size: 9px;
+  font-style: italic;
+}
