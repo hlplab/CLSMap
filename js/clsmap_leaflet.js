@@ -5,7 +5,7 @@
 var CLSMap = (function() {
   return {
     initialize: function() {
-      var map = L.map('map-canvas').setView([43.130, -77.602], 9);
+      var map = L.map('map-canvas').setView([43.130, -77.602], 3);
 
       // add an OpenStreetMap tile layer
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -16,7 +16,8 @@ var CLSMap = (function() {
         })
         .done(function(data) {
           console.log('Success loading JSON file!');
-          var markers = new L.MarkerClusterGroup();
+          var markers = new L.MarkerClusterGroup({disableClusteringAtZoom: 12,
+             maxClusterRadius: 20});
           var addJitter = function() {
               // Some points may overlap, so add a random amount in the +/- one
               //second range to jitter them
